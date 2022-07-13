@@ -19,7 +19,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 git clone https://github.com/vernesong/OpenClash.git
-mv OpenClash/uci-app-openclash feeds/luci/applications/luci-app-openclash
+mv OpenClash/luci-app-openclash feeds/luci/applications/luci-app-openclash
 ln -s lede/feeds/luci/applications/luci-app-openclash lede/package/feeds/luci/luci-app-openclash
 make defconfig
 make menuconfig
