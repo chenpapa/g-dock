@@ -17,3 +17,9 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+
+git clone https://github.com/vernesong/OpenClash.git
+mv OpenClash/uci-app-openclash feeds/luci/applications/luci-app-openclash
+ln -s lede/feeds/luci/applications/luci-app-openclash lede/package/feeds/luci/luci-app-openclash
+make defconfig
+make menuconfig
